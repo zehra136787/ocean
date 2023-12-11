@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body{
+  background-image: url(arka\ plan.jpg);
+  background-position: center; /* Görseli Ortala */
+  background-repeat: no-repeat; /* Resmi tekrarlama */
+  background-size: cover;
+}
+
+/* menü kısmı*/
+
+.menu ul{ 
+    display: inline-flex; /* yazıları yana yana getirme */
+    list-style: none;
+}
+.menu ul li{
+    border: 2px solid white;
+    background-color: #03a9f4;
+    border-radius: 10px;
+    width: 150s;
+    margin: 15px;
+    padding: 15px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.menu ul li :hover{
+width: 150s;
+ margin: 15px;
+}
+
+
+/* başlık */
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:50px;
+  
+}
+.title {
+   position: relative;
+}
+.title h2{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  font-size: 190px;
+}
+.title h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+.title h2:nth-child(2){
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%,100%
+    {
+        clip-path: polygon(0 55%, 16% 51%, 34% 55%, 50% 64%, 68% 71%, 89% 69%, 100% 61%, 99% 99%, 0% 98%);
+    }
+    50%
+    {
+        clip-path: polygon(0 57%, 17% 61%, 33% 65%, 51% 62%, 69% 51%, 84% 45%, 100% 45%, 99% 99%, 0% 98%);
+    }
+}
+
+/*resim galerisi*/
+
+.inclusive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: w;
+}
+.galeri{
+    position: relative ;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: water 20s linear infinite;
+}
+
+@keyframes water
+{
+    0%
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.inclusive span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px); 
+    -webkit-box-reflect: below 0px  linear-gradient(transparent,transparent,#0004);
+}
+
+.inclusive span img {
+    border: 2px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* balancuk*/
+
+.bubbles img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+}
+
+@keyframes bubble
+{
+ 0%{
+    transform: translateY(0);
+    opacity: 0;
+ }
+ 50%{
+    
+    opacity: 1;
+ }
+ 75%{
+    
+    opacity: 1;
+ }
+ 100%{
+    transform: translateY(-80vh);
+    opacity: 0;
+ }
+
+}
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+.bubbles img:nth-child(1)
+{
+animation-delay: 1.50s;
+}
+.bubbles img:nth-child(2)
+{
+animation-delay: 2s;
+}
+.bubbles img:nth-child(3)
+{
+animation-delay: 1s;
+}
+.bubbles img:nth-child(4)
+{
+animation-delay: 3s;
+}
+.bubbles img:nth-child(5)
+{
+animation-delay: 4.5s;
+}
+.bubbles img:nth-child(6)
+{
+animation-delay: 3s;
+}
+.bubbles img:nth-child(7)
+{
+animation-delay: 6s;
+}
+.bubbles img:nth-child(8)
+{
+animation-delay: 7s;
+}
